@@ -268,10 +268,12 @@ hr {
   border-radius: 5px;
 }
 
-/* .footer-icon {
+.footer-icon {
   margin-top: 10px;
   margin-bottom: 10px;
-} */
+  cursor: pointer;
+   
+}
 
 .copyright {
   height: 50px;
