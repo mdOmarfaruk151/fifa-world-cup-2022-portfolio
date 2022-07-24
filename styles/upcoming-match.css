@@ -3,6 +3,7 @@
 /* ...........common style or Utilites.............*/
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -40,6 +41,65 @@ main {
   font-size: 50px;
   color: white;
 }
+
+/*............. animation................ */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .static-txt {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li {
+  list-style: none;
+  color: #fc6d6d;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  border-left: 2px solid #fc6d6d;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/*......... animation End................... */
+
 .top-sub-title {
   margin-bottom: 20px;
   margin-top: 10px;
@@ -192,6 +252,16 @@ main {
   margin-left: 25px;
 }
 
+.View {
+  color: white;
+  background-color: red;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-top: 30px;
+  /* margin-left:500px ; */
+  visibility: hidden;
+}
+
 /* ................footer..................... */
 
 .footer {
@@ -224,31 +294,30 @@ hr {
   cursor: pointer;
 }
 
-
-.fa-facebook-square{
+.fa-facebook-square {
   color: grey;
   margin-right: 10px;
-  font-size: 40px ;
+  font-size: 40px;
 }
-.fa-instagram{
+.fa-instagram {
   color: grey;
   margin-right: 10px;
-  font-size: 40px ;
+  font-size: 40px;
 }
-.fa-linkedin{
+.fa-linkedin {
   color: grey;
   margin-right: 10px;
-  font-size: 40px ;
+  font-size: 40px;
 }
-.fa-twitter{
+.fa-twitter {
   color: grey;
   margin-right: 10px;
-  font-size: 40px ;
+  font-size: 40px;
 }
-.fa-youtube{
+.fa-youtube {
   color: grey;
   margin-right: 10px;
-  font-size: 40px ;
+  font-size: 40px;
 }
 
 .copyright {
@@ -272,6 +341,10 @@ hr {
   .top-banner {
     flex-wrap: wrap;
     width: 100%;
+  }
+
+  .wrapper {
+    display: grid;
   }
 
   .half-width {
@@ -311,10 +384,15 @@ hr {
     /* background-color: #ffc014; */
     grid-template-columns: repeat(2, 1fr);
   }
+
   .View {
     visibility: visible;
-    display: flex;
-    flex-direction: column;
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+
+  .wrapper {
+    display: grid;
   }
 
   .box-1 {
