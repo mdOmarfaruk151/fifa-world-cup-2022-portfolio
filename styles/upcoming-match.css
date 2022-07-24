@@ -224,6 +224,33 @@ hr {
   cursor: pointer;
 }
 
+
+.fa-facebook-square{
+  color: grey;
+  margin-right: 10px;
+  font-size: 40px ;
+}
+.fa-instagram{
+  color: grey;
+  margin-right: 10px;
+  font-size: 40px ;
+}
+.fa-linkedin{
+  color: grey;
+  margin-right: 10px;
+  font-size: 40px ;
+}
+.fa-twitter{
+  color: grey;
+  margin-right: 10px;
+  font-size: 40px ;
+}
+.fa-youtube{
+  color: grey;
+  margin-right: 10px;
+  font-size: 40px ;
+}
+
 .copyright {
   height: 50px;
   color: #3e8e41;
